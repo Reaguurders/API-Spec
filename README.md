@@ -125,6 +125,8 @@ GET: https://api.dumpert.nl/mobile_api/json/hotshiz
 Purpose: Get the latest 'hotshiz'(?) videos.  
 Note: It is unknown on what hotshiz is based.
 
+---
+
 ## Comments
 The main endpoint for comments is: https://comments.dumpert.nl/api/v1.0/
 
@@ -138,6 +140,8 @@ Includeitems determines if the comments should be included, else you only get st
 |----------|----------|----------|
 |'{DumpertID}'|Dumpert ID, slash|`https://comments.dumpert.nl/api/v1.0/articles/7590061/1a3188c7/comments/?includeitems={01}`|
 |'{01}'|0 or 1|`https://comments.dumpert.nl/api/v1.0/articles/7590061/1a3188c7/comments/?includeitems=1`|
+
+---
 
 ### comments
 #### {CommentID}
