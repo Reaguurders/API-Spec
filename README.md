@@ -132,8 +132,8 @@ The main endpoint for comments is: https://comments.dumpert.nl/api/v1.0/
 
 ### articles
 #### {DumpertID}
-GET: https://comments.dumpert.nl/api/v1.0/articles/{DumpertID}/comments/?includeitems={01}
-Purpose: Get all the comments, or comment count, of a {DumpertID}, this also gives comment ids, which are used by the /comments/ endpoint.
+GET: https://comments.dumpert.nl/api/v1.0/articles/{DumpertID}/comments/?includeitems={01}  
+Purpose: Get all the comments, or comment count, of a {DumpertID}, this also gives comment ids, which are used by the /comments/ endpoint.  
 Includeitems determines if the comments should be included, else you only get stats of the comments of the {DumpertID}
 
 | Parameter | Format | Example |
@@ -145,7 +145,7 @@ Includeitems determines if the comments should be included, else you only get st
 
 ### comments
 #### {CommentID}
-GET: https://comments.dumpert.nl/api/v1.0/comments/{CommentID}/
+GET: https://comments.dumpert.nl/api/v1.0/comments/{CommentID}/  
 Purpose: Get all data of a comment id like, DumpertID, title, auther, comment, time, banned, kudos, childern, reported, parent.
 
 | Parameter | Format | Example |
