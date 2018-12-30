@@ -36,4 +36,12 @@ GET: https://api.dumpert.nl/mobile_api/json/maand/top5/{DATE}
 |----------|----------|----------|----------|
 |'{DATE}' | YYYYmm | Get the top videos of the given month (mm) in the year (YYYY), {DATE}.|`https://api.dumpert.nl/mobile_api/json/week/top5/201852`|
 
+### latest
+GET: https://api.dumpert.nl/mobile_api/json/latest/{INT}
+
+| Parameter | Format | Function | Example |
+|----------|----------|----------|----------|
+|'{INT}' | int (0-11457) | Get the latest videos that have been uploaded on page {INT}.|`https://api.dumpert.nl/mobile_api/json/latest/0`|
+Note: The max value of 11457 will change overtime if more videos have been uploaded
+
 
