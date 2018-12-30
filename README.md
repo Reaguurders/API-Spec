@@ -16,7 +16,7 @@ API Endpoint (Comment-related): https://comments.dumpert.nl/api/v1.0/
 ## Video
 ### top5
 #### dag
-GET: https://api.dumpert.nl/mobile_api/json/top5/dag/{DATE}
+GET: https://api.dumpert.nl/mobile_api/json/top5/dag/{DATE}  
 Purpose: Get the top videos of the given date (YYYY-mm-dd), {DATE}.
 
 | Parameter | Format | Example |
@@ -24,7 +24,7 @@ Purpose: Get the top videos of the given date (YYYY-mm-dd), {DATE}.
 |'{DATE}'|YYYY-mm-dd|`https://api.dumpert.nl/mobile_api/json/top5/dag/2018-12-30`|
 
 #### week
-GET: https://api.dumpert.nl/mobile_api/json/top5/week/{DATE}
+GET: https://api.dumpert.nl/mobile_api/json/top5/week/{DATE}  
 Purpose: Get the top videos of the given week (ww) in the year (YYYY), {DATE}.
 
 | Parameter | Format | Example |
@@ -32,7 +32,7 @@ Purpose: Get the top videos of the given week (ww) in the year (YYYY), {DATE}.
 |'{DATE}' | YYYYww |`https://api.dumpert.nl/mobile_api/json/top5/week/201852`|
 
 #### maand
-GET: https://api.dumpert.nl/mobile_api/json/top5/maand/{DATE}
+GET: https://api.dumpert.nl/mobile_api/json/top5/maand/{DATE}  
 Purpose: Get the top videos of the given month (mm) in the year (YYYY), {DATE}.
 
 | Parameter | Format | Example |
@@ -43,7 +43,7 @@ Purpose: Get the top videos of the given month (mm) in the year (YYYY), {DATE}.
 
 ### latest
 #### latest
-GET: https://api.dumpert.nl/mobile_api/json/latest/{INT}
+GET: https://api.dumpert.nl/mobile_api/json/latest/{INT}  
 Purpose: Get the latest videos that have been uploaded on page {INT}.
 
 | Parameter | Format | Example |
@@ -56,7 +56,7 @@ Note: The max value of 11457 will change overtime if more videos have been uploa
 
 ### classics
 #### classics
-GET: https://api.dumpert.nl/mobile_api/json/classics/{INT}
+GET: https://api.dumpert.nl/mobile_api/json/classics/{INT}  
 Purpose: Get the latest 'classic' videos (from the app) that have been uploaded on page {INT}.
 
 | Parameter | Format | Example |
@@ -67,7 +67,7 @@ Purpose: Get the latest 'classic' videos (from the app) that have been uploaded 
 
 ### related
 #### related
-GET: https://api.dumpert.nl/mobile_api/json/related/{DumpertID}
+GET: https://api.dumpert.nl/mobile_api/json/related/{DumpertID}  
 Purpose: Get videos that are related to the video {DumpertID}.
 
 | Parameter | Format | Example |
@@ -78,7 +78,7 @@ Purpose: Get videos that are related to the video {DumpertID}.
 
 ### rating
 #### rating
-GET: https://api.dumpert.nl/mobile_api/json/rating/{DumpertID}/{UpDown}
+GET: https://api.dumpert.nl/mobile_api/json/rating/{DumpertID}/{UpDown}  
 Purpose: {UpDown} the kudos of video {DumpertID}
 
 | Parameter | Format | Example |
