@@ -16,32 +16,73 @@ API Endpoint (Comment-related): https://comments.dumpert.nl/api/v1.0/
 ## Video
 ### top5
 #### dag
-GET: https://api.dumpert.nl/mobile_api/json/dag/top5/{DATE}
+GET: https://api.dumpert.nl/mobile_api/json/top5/dag/{DATE}
+Purpose: Get the top videos of the given date (YYYY-mm-dd), {DATE}.
 
-| Parameter | Format | Function | Example |
-|----------|----------|----------|----------|
-|'{DATE}' | YYYY-mm-dd | Get the top videos of the given date (YYYY-mm-dd), {DATE}.|`https://api.dumpert.nl/mobile_api/json/dag/top5/2018-12-30`|
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{DATE}'|YYYY-mm-dd|`https://api.dumpert.nl/mobile_api/json/top5/dag/2018-12-30`|
 
 #### week
-GET: https://api.dumpert.nl/mobile_api/json/week/top5/{DATE}
+GET: https://api.dumpert.nl/mobile_api/json/top5/week/{DATE}
+Purpose: Get the top videos of the given week (ww) in the year (YYYY), {DATE}.
 
-| Parameter | Format | Function | Example |
-|----------|----------|----------|----------|
-|'{DATE}' | YYYYww | Get the top videos of the given week (ww) in the year (YYYY), {DATE}.|`https://api.dumpert.nl/mobile_api/json/week/top5/201852`|
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{DATE}' | YYYYww |`https://api.dumpert.nl/mobile_api/json/top5/week/201852`|
 
 #### maand
-GET: https://api.dumpert.nl/mobile_api/json/maand/top5/{DATE}
+GET: https://api.dumpert.nl/mobile_api/json/top5/maand/{DATE}
+Purpose: Get the top videos of the given month (mm) in the year (YYYY), {DATE}.
 
-| Parameter | Format | Function | Example |
-|----------|----------|----------|----------|
-|'{DATE}' | YYYYmm | Get the top videos of the given month (mm) in the year (YYYY), {DATE}.|`https://api.dumpert.nl/mobile_api/json/week/top5/201852`|
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{DATE}' | YYYYmm |`https://api.dumpert.nl/mobile_api/json/top5/maand/201812`|
+
+---
 
 ### latest
+#### latest
 GET: https://api.dumpert.nl/mobile_api/json/latest/{INT}
+Purpose: Get the latest videos that have been uploaded on page {INT}.
 
-| Parameter | Format | Function | Example |
-|----------|----------|----------|----------|
-|'{INT}' | int (0-11457) | Get the latest videos that have been uploaded on page {INT}.|`https://api.dumpert.nl/mobile_api/json/latest/0`|
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{INT}'|int (0-11457)|`https://api.dumpert.nl/mobile_api/json/latest/0`|
+
 Note: The max value of 11457 will change overtime if more videos have been uploaded
 
+---
 
+### classics
+#### classics
+GET: https://api.dumpert.nl/mobile_api/json/classics/{INT}
+Purpose: Get the latest 'classic' videos (from the app) that have been uploaded on page {INT}.
+
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{INT}' | int | |`https://api.dumpert.nl/mobile_api/json/classics/0`|
+
+---
+
+### related
+#### related
+GET: https://api.dumpert.nl/mobile_api/json/related/{DumpertID}
+Purpose: Get videos that are related to the video {DumpertID}.
+
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{DumpertID}' | Dumpert ID |`https://api.dumpert.nl/mobile_api/json/related/6693587_7ea8097a`|
+
+---
+
+### rating
+#### rating
+GET: https://api.dumpert.nl/mobile_api/json/rating/{DumpertID}/{UpDown}
+Purpose: {UpDown} the kudos of video {DumpertID}
+
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{DumpertID}' | Dumpert ID |`https://api.dumpert.nl/mobile_api/json/rating/6693587_7ea8097a/{UpDown}`|
+|'{UpDown}' | up |`https://api.dumpert.nl/mobile_api/json/rating/6693587_7ea8097a/up`|
+|'{UpDown}' | down |`https://api.dumpert.nl/mobile_api/json/rating/6742636_13351bf3/down`|
