@@ -14,6 +14,8 @@ API Endpoint (Video-related): https://api.dumpert.nl/mobile_api/json/
 API Endpoint (Comment-related): https://comments.dumpert.nl/api/v1.0/
 
 ## Video
+The main endpoint for videos is: https://api.dumpert.nl/mobile_api/json/
+
 ### top5
 #### dag
 GET: https://api.dumpert.nl/mobile_api/json/top5/dag/{DATE}  
@@ -37,7 +39,7 @@ Purpose: Get the top videos of the given month (mm) in the year (YYYY), {DATE}.
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{DATE}' | YYYYmm |`https://api.dumpert.nl/mobile_api/json/top5/maand/201812`|
+|'{DATE}'|YYYYmm|`https://api.dumpert.nl/mobile_api/json/top5/maand/201812`|
 
 ---
 
@@ -72,18 +74,18 @@ Purpose: Get videos that are related to the video {DumpertID}.
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{DumpertID}'|Dumpert ID|`https://api.dumpert.nl/mobile_api/json/related/6693587_7ea8097a`|
+|'{DumpertID}'|Dumpert ID, underscore|`https://api.dumpert.nl/mobile_api/json/related/6693587_7ea8097a`|
 
 ---
 
 ### rating
 #### rating
 GET: https://api.dumpert.nl/mobile_api/json/rating/{DumpertID}/{UpDown}  
-Purpose: {UpDown} the kudos of video {DumpertID}
+Purpose: {UpDown} the kudos of video {DumpertID}.
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{DumpertID}' | Dumpert ID |`https://api.dumpert.nl/mobile_api/json/rating/6693587_7ea8097a/{UpDown}`|
+|'{DumpertID}' |Dumpert ID, underscore|`https://api.dumpert.nl/mobile_api/json/rating/6693587_7ea8097a/{UpDown}`|
 |'{UpDown}'|up|`https://api.dumpert.nl/mobile_api/json/rating/6693587_7ea8097a/up`|
 |'{UpDown}'|down|`https://api.dumpert.nl/mobile_api/json/rating/6742636_13351bf3/down`|
 
@@ -91,18 +93,18 @@ Purpose: {UpDown} the kudos of video {DumpertID}
 
 ### info
 #### info
-GET: https://api.dumpert.nl/mobile_api/json/info/{DumpertID}
-Purpose: Get the info from a video, like title, id, description, date, views, kudos, media url
+GET: https://api.dumpert.nl/mobile_api/json/info/{DumpertID}  
+Purpose: Get the info from a video, like title, id, description, date, views, kudos, media url.
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{DumpertID}'|Dumpert ID|`https://api.dumpert.nl/mobile_api/json/info/6693587_7ea8097a`|
+|'{DumpertID}'|Dumpert ID, underscore|`https://api.dumpert.nl/mobile_api/json/info/6693587_7ea8097a`|
 
 ---
 
 ### search
 #### {SearchString}
-GET: https://api.dumpert.nl/mobile_api/json/search/{SearchString}/{Page}
+GET: https://api.dumpert.nl/mobile_api/json/search/{SearchString}/{Page}  
 Purpose: Search videos using a string, and get page {Page} of the results.
 
 | Parameter | Format | Example |
@@ -113,12 +115,35 @@ Purpose: Search videos using a string, and get page {Page} of the results.
 ---
 
 ### dumperttv
-GET: https://api.dumpert.nl/mobile_api/json/dumperttv
+GET: https://api.dumpert.nl/mobile_api/json/dumperttv  
 Purpose: Get the latest Dumpert TV videos.
 
 ---
 
-### dumperttv
-GET: https://api.dumpert.nl/mobile_api/json/hotshiz
-Purpose: Get the latest 'hotshiz'(?) videos.
+### hotshiz
+GET: https://api.dumpert.nl/mobile_api/json/hotshiz  
+Purpose: Get the latest 'hotshiz'(?) videos.  
 Note: It is unknown on what hotshiz is based.
+
+## Comments
+The main endpoint for comments is: https://comments.dumpert.nl/api/v1.0/
+
+### articles
+#### {DumpertID}
+GET: https://comments.dumpert.nl/api/v1.0/articles/{DumpertID}/comments/?includeitems={01}
+Purpose: Get all the comments, or comment count, of a {DumpertID}, this also gives comment ids, which are used by the /comments/ endpoint.
+Includeitems determines if the comments should be included, else you only get stats of the comments of the {DumpertID}
+
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{DumpertID}'|Dumpert ID, slash|`https://comments.dumpert.nl/api/v1.0/articles/7590061/1a3188c7/comments/?includeitems={01}`|
+|'{01}'|0 or 1|`https://comments.dumpert.nl/api/v1.0/articles/7590061/1a3188c7/comments/?includeitems=1`|
+
+### comments
+#### {CommentID}
+GET: https://comments.dumpert.nl/api/v1.0/comments/{CommentID}/
+Purpose: Get all data of a comment id like, DumpertID, title, auther, comment, time, banned, kudos, childern, reported, parent.
+
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{CommentID}'|Comment ID|`https://comments.dumpert.nl/api/v1.0/comments/49136/`|
