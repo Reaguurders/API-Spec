@@ -43,12 +43,12 @@ Purpose: Get the top videos of the given month (mm) in the year (YYYY), {DATE}.
 
 ### latest
 #### latest
-GET: https://api.dumpert.nl/mobile_api/json/latest/{INT}  
-Purpose: Get the latest videos that have been uploaded on page {INT}.
+GET: https://api.dumpert.nl/mobile_api/json/latest/{Page}  
+Purpose: Get the latest videos that have been uploaded, on page {Page}.
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{INT}'|int (0-11457)|`https://api.dumpert.nl/mobile_api/json/latest/0`|
+|'{Page}'|int (0-11457)|`https://api.dumpert.nl/mobile_api/json/latest/0`|
 
 Note: The max value of 11457 will change overtime if more videos have been uploaded
 
@@ -56,12 +56,12 @@ Note: The max value of 11457 will change overtime if more videos have been uploa
 
 ### classics
 #### classics
-GET: https://api.dumpert.nl/mobile_api/json/classics/{INT}  
-Purpose: Get the latest 'classic' videos (from the app) that have been uploaded on page {INT}.
+GET: https://api.dumpert.nl/mobile_api/json/classics/{Page}  
+Purpose: Get the latest 'classic' videos (from the app) that have been uploaded, on page {Page}.
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{INT}' | int | |`https://api.dumpert.nl/mobile_api/json/classics/0`|
+|'{Page}'|int|`https://api.dumpert.nl/mobile_api/json/classics/0`|
 
 ---
 
@@ -72,7 +72,7 @@ Purpose: Get videos that are related to the video {DumpertID}.
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{DumpertID}' | Dumpert ID |`https://api.dumpert.nl/mobile_api/json/related/6693587_7ea8097a`|
+|'{DumpertID}'|Dumpert ID|`https://api.dumpert.nl/mobile_api/json/related/6693587_7ea8097a`|
 
 ---
 
@@ -84,5 +84,41 @@ Purpose: {UpDown} the kudos of video {DumpertID}
 | Parameter | Format | Example |
 |----------|----------|----------|
 |'{DumpertID}' | Dumpert ID |`https://api.dumpert.nl/mobile_api/json/rating/6693587_7ea8097a/{UpDown}`|
-|'{UpDown}' | up |`https://api.dumpert.nl/mobile_api/json/rating/6693587_7ea8097a/up`|
-|'{UpDown}' | down |`https://api.dumpert.nl/mobile_api/json/rating/6742636_13351bf3/down`|
+|'{UpDown}'|up|`https://api.dumpert.nl/mobile_api/json/rating/6693587_7ea8097a/up`|
+|'{UpDown}'|down|`https://api.dumpert.nl/mobile_api/json/rating/6742636_13351bf3/down`|
+
+---
+
+### info
+#### info
+GET: https://api.dumpert.nl/mobile_api/json/info/{DumpertID}
+Purpose: Get the info from a video, like title, id, description, date, views, kudos, media url
+
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{DumpertID}'|Dumpert ID|`https://api.dumpert.nl/mobile_api/json/info/6693587_7ea8097a`|
+
+---
+
+### search
+#### {SearchString}
+GET: https://api.dumpert.nl/mobile_api/json/search/{SearchString}/{Page}
+Purpose: Search videos using a string, and get page {Page} of the results.
+
+| Parameter | Format | Example |
+|----------|----------|----------|
+|'{SearchString}'|string|`https://api.dumpert.nl/mobile_api/json/search/keiglad/{Page}`|
+|'{Page}'|int|`https://api.dumpert.nl/mobile_api/json/search/keiglad/1`|
+
+---
+
+### dumperttv
+GET: https://api.dumpert.nl/mobile_api/json/dumperttv
+Purpose: Get the latest Dumpert TV videos.
+
+---
+
+### dumperttv
+GET: https://api.dumpert.nl/mobile_api/json/hotshiz
+Purpose: Get the latest 'hotshiz'(?) videos.
+Note: It is unknown on what hotshiz is based.
