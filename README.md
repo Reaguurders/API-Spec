@@ -10,7 +10,7 @@ The Dumpert.nl API documented (all the info that is known)
 
 # API Endpoint
 Dumpert has two API endpoints, one for video related info and one for getting comment info.
-API Endpoint (Video-related): https://api.dumpert.nl/mobile_api/json/
+API Endpoint (Video-related): https://api.dumpert.nl/mobile_api/json/  
 API Endpoint (Comment-related): https://comments.dumpert.nl/api/v1.0/
 
 ## Video
