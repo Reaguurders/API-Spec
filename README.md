@@ -158,8 +158,17 @@ Purpose: Get all data of a comment id like, DumpertID, title, auther, comment, t
 ## Soundboard
 ### soundboard.json
 GET: https://video-snippets.dumpert.nl/soundboard.json  
-Purpose: Get all the data of the soundboard, including thumbails and media URLS
+Purpose: Get all the data of the soundboard, including thumbails and media URLs
 
 | Parameter | Format | Example |
 |----------|----------|----------|
 |-|-|`https://video-snippets.dumpert.nl/soundboard.json`|  
+
+### videomixer.json
+GET: https://video-snippets.dumpert.nl/videomixer.json  
+Purpose: Get all assets used by the videomixer of the app
+
+| Parameter | Format | Example |
+|----------|----------|----------|
+|-|-|`https://video-snippets.dumpert.nl/videomixer.json`|  
+
