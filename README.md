@@ -9,9 +9,10 @@ The Dumpert.nl API documented (all the info that is known)
 * Getting comment info
 
 # API Endpoint
-Dumpert has two API endpoints, one for video related info and one for getting comment info.  
+Dumpert has three API endpoints, one for video related info, one for getting comment info and one for the soundboard.  
 API Endpoint (Video-related): https://api.dumpert.nl/mobile_api/json/  
 API Endpoint (Comment-related): https://comments.dumpert.nl/api/v1.0/
+API Endpoint (Soundboard): https://video-snippets.dumpert.nl/
 
 ## Video
 The main endpoint for videos is: https://api.dumpert.nl/mobile_api/json/
@@ -150,4 +151,15 @@ Purpose: Get all data of a comment id like, DumpertID, title, auther, comment, t
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{CommentID}'|Comment ID|`https://comments.dumpert.nl/api/v1.0/comments/49136/`|
+|'{CommentID}'|Comment ID|`https://comments.dumpert.nl/api/v1.0/comments/49136/`|  
+
+---
+
+## Soundboard
+### soundboard.json
+GET: https://video-snippets.dumpert.nl/soundboard.json
+Purpose: Get all the data of the soundboard, including thumbails and media URLS
+
+| Parameter | Format | Example |
+|----------|----------|----------|
+|-|-|`https://video-snippets.dumpert.nl/soundboard.json`|  
