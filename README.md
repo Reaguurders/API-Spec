@@ -157,7 +157,7 @@ Purpose: Get all data of a comment id like, DumpertID, title, auther, comment, t
 
 ## Soundboard
 ### soundboard.json
-GET: https://video-snippets.dumpert.nl/soundboard.json
+GET: https://video-snippets.dumpert.nl/soundboard.json  
 Purpose: Get all the data of the soundboard, including thumbails and media URLS
 
 | Parameter | Format | Example |
