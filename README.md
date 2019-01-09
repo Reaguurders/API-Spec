@@ -123,8 +123,8 @@ Purpose: Get the latest Dumpert TV videos.
 
 ### hotshiz
 GET: https://api.dumpert.nl/mobile_api/json/hotshiz  
-Purpose: Get the latest 'hotshiz'(?) videos.  
-Note: It is unknown on what hotshiz is based.
+Purpose: Get the latest 'trending' videos.  
+Hotshiz are the videos that are presented at the top of the Dumpert App
 
 ---
 
