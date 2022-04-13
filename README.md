@@ -51,9 +51,8 @@ Purpose: Get the latest videos that have been uploaded, on page {Page}.
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{Page}'|int (0-11457)|`https://api.dumpert.nl/mobile_api/json/latest/0`|
+|'{Page}'|int (0-365)|`https://api.dumpert.nl/mobile_api/json/latest/0`|
 
-Note: The max value of 11457 will change overtime if more videos have been uploaded
 
 ---
 
