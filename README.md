@@ -51,9 +51,8 @@ Purpose: Get the latest videos that have been uploaded, on page {Page}.
 
 | Parameter | Format | Example |
 |----------|----------|----------|
-|'{Page}'|int (0-11457)|`https://api.dumpert.nl/mobile_api/json/latest/0`|
+|'{Page}'|int (0-365)|`https://api.dumpert.nl/mobile_api/json/latest/0`|
 
-Note: The max value of 11457 will change overtime if more videos have been uploaded
 
 ---
 
@@ -142,6 +141,7 @@ Includeitems determines if the comments should be included, else you only get st
 |'{DumpertID}'|Dumpert ID, slash|`https://comments.dumpert.nl/api/v1.0/articles/7590061/1a3188c7/comments/?includeitems={01}`|
 |'{01}'|0 or 1|`https://comments.dumpert.nl/api/v1.0/articles/7590061/1a3188c7/comments/?includeitems=1`|
 
+Note: normaly the dumpert id looks like 7590061_1a3188c7 but since they cant write proper api's its 7590061/1a3188c7
 ---
 
 ### comments
